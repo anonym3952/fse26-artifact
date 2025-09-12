@@ -1,0 +1,10 @@
+,directory,seed,file_old,file_new,sampler,method,algorithm,sampling_time,num_samples,num_valid_old_expected,num_valid_old,num_needed_old,num_retained,num_retained_expected,num_more_old,num_needed_new,num_candidates_new
+0,data/histories_unified/FinancialServices,16873,2017-05-22.dimacs,2017-09-28.dimacs,spur,tseitin,expectation_uniform,88.63605809956789,1000,0.0,0,0,0,0.0,0,1000,0
+1,data/histories_unified/FinancialServices,16873,2017-09-28.dimacs,2017-10-20.dimacs,spur,tseitin,expectation_uniform,146.06389754079282,1000,0.0,0,0,0,0.0,0,1000,0
+2,data/histories_unified/FinancialServices,16873,2017-10-20.dimacs,2017-11-20.dimacs,spur,tseitin,expectation_uniform,141.10159124806523,1000,0.7825228536802652,2,0,0,0.7825228536802652,0,1000,0
+3,data/histories_unified/FinancialServices,16873,2017-11-20.dimacs,2017-12-22.dimacs,spur,tseitin,expectation_uniform,46.44527062959969,1000,853.7398856922682,858,854,854,853.7398856922682,0,146,0
+4,data/histories_unified/FinancialServices,16873,2017-12-22.dimacs,2018-01-23.dimacs,spur,tseitin,expectation_uniform,130.76129732839763,1000,0.0,0,0,0,0.0,0,1000,0
+5,data/histories_unified/FinancialServices,16873,2018-01-23.dimacs,2018-02-20.dimacs,spur,tseitin,expectation_uniform,196.50632628798485,1000,0.0,0,0,0,0.0,0,1000,0
+6,data/histories_unified/FinancialServices,16873,2018-02-20.dimacs,2018-03-26.dimacs,spur,tseitin,expectation_uniform,184.55743351764977,1000,0.0,0,0,0,0.0,0,1000,0
+7,data/histories_unified/FinancialServices,16873,2018-03-26.dimacs,2018-04-23.dimacs,spur,tseitin,expectation_uniform,232.31485358439386,1000,0.0,0,0,0,0.0,0,1000,0
+8,data/histories_unified/FinancialServices,16873,2018-04-23.dimacs,2018-05-09.dimacs,spur,tseitin,expectation_uniform,219.73134718090296,1000,0.0,0,0,0,0.0,0,1000,0

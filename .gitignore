@@ -1,0 +1,15 @@
+# folders
+/tmp
+data/*/*/conjunctions
+/output/plots
+
+# python
+.venv
+__pycache__
+
+# other
+/.vscode
+.z3-trace
+.DS_Store
+.metadata
+

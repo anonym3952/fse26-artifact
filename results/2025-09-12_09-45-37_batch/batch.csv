@@ -1,0 +1,26 @@
+name;runtime
+data/histories_unified/BusyBox (--seed 16873 -m none);87.90428431518376
+data/histories_unified/Fiasco (--seed 16873 -m none);3.1274569053202868
+data/histories_unified/Fiasco (--seed 16873 -a uniform -m rejection);8.272234342992306
+data/histories_unified/Fiasco (--seed 16873 -a uniform -m tseitin);14.579440336674452
+data/histories_unified/Fiasco (--seed 16873 -a expectation_uniform -m rejection);8.95706201158464
+data/histories_unified/BusyBox (--seed 16873 -a uniform -m rejection);131.7604131065309
+data/histories_unified/Fiasco (--seed 16873 -a expectation_uniform -m tseitin);14.487988660112023
+data/histories_unified/FinancialServices (--seed 16873 -m none);12.232730753719807
+data/histories_unified/BusyBox (--seed 16873 -a uniform -m tseitin);162.59363440796733
+data/histories_unified/BusyBox (--seed 16873 -a expectation_uniform -m tseitin);163.0091156437993
+data/histories_unified/BusyBox (--seed 16873 -a expectation_uniform -m rejection);225.28329060412943
+data/histories_unified/FinancialServices (--seed 16873 -a uniform -m rejection);120.10166104882956
+data/histories_unified/soletta (--seed 16873 -m none);32.318421110510826
+data/histories_unified/FinancialServices (--seed 16873 -a expectation_uniform -m rejection);122.91345426626503
+data/histories_unified/soletta (--seed 16873 -a uniform -m rejection);40.527738224714994
+data/histories_unified/soletta (--seed 16873 -a uniform -m tseitin);193.20612707734108
+data/histories_unified/uClibc (--seed 16873 -m none);26.384026315063238
+data/histories_unified/soletta (--seed 16873 -a expectation_uniform -m tseitin);194.052147006616
+data/histories_unified/uClibc (--seed 16873 -a uniform -m rejection);37.73631962016225
+data/histories_unified/soletta (--seed 16873 -a expectation_uniform -m rejection);283.95596830174327
+data/histories_unified/uClibc (--seed 16873 -a uniform -m tseitin);112.64182798750699
+data/histories_unified/uClibc (--seed 16873 -a expectation_uniform -m tseitin);108.07411467470229
+data/histories_unified/uClibc (--seed 16873 -a expectation_uniform -m rejection);621.7790821064264
+data/histories_unified/FinancialServices (--seed 16873 -a uniform -m tseitin);1478.5877089519054
+data/histories_unified/FinancialServices (--seed 16873 -a expectation_uniform -m tseitin);1489.6756082326174

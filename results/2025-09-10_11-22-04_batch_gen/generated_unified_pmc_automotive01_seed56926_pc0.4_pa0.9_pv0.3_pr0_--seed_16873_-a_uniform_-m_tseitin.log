@@ -1,0 +1,8 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a uniform -m tseitin data/generated_unified_pmc/automotive01_seed56926_pc0.4_pa0.9_pv0.3_pr0.1
+data/generated_unified_pmc/automotive01_seed56926_pc0.4_pa0.9_pv0.3_pr0.1
+1000 samples
+method: tseitin
+seed: 16873
+Computing model count of each file:
+Processing pairs
+timeout of 7200s reached

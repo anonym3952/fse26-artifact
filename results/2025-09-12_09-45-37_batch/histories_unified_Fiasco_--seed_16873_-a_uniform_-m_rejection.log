@@ -1,0 +1,87 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a uniform -m rejection data/histories_unified/Fiasco
+data/histories_unified/Fiasco
+1000 samples
+method: rejection
+seed: 16873
+Computing model count of each file:
+Processing pairs
+Generated & checked 314.92061752046476 candidates per second
+Generated & checked 13714.274346816119 candidates per second
+Generated & checked 4010.495741160384 candidates per second
+Generated & checked 12364.652891814894 candidates per second
+Generated & checked 10592.103633572768 candidates per second
+Generated & checked 13890.679055733812 candidates per second
+Generated & checked 13459.97478872224 candidates per second
+Generated & checked 161.01037821944485 candidates per second
+Generated & checked 7522.61261520546 candidates per second
+Generated & checked 13090.959824399186 candidates per second
+Generated & checked 14135.061831886087 candidates per second
+Generated & checked 7587.835452694131 candidates per second
+Generated & checked 11586.260346218116 candidates per second
+Generated & checked 8208.083808620628 candidates per second
+Generated & checked 10730.138699303618 candidates per second
+Generated & checked 2249.180234513063 candidates per second
+Generated & checked 5755.303612314974 candidates per second
+Generated & checked 9809.754785204404 candidates per second
+Generated & checked 1251.2204233356076 candidates per second
+Generated & checked 10688.55522339915 candidates per second
+Generated & checked 5038.740976688363 candidates per second
+Generated & checked 11427.909019880963 candidates per second
+Generated & checked 11812.170734696812 candidates per second
+Generated & checked 1616.166524546209 candidates per second
+Generated & checked 4143.308383812568 candidates per second
+Generated & checked 4185.875126250437 candidates per second
+Total samples: 30000
+Unique samples: 9094 (-69.69%)
+wrote results to output/Fiasco_seed16873_uniform_rejection_spur_1000.csv
+
+  0%|          | 0/31 [00:00<?, ?it/s]
+  6%|▋         | 2/31 [00:00<00:01, 15.09it/s]
+ 13%|█▎        | 4/31 [00:00<00:01, 15.17it/s]
+ 19%|█▉        | 6/31 [00:00<00:01, 14.86it/s]
+ 26%|██▌       | 8/31 [00:00<00:01, 14.62it/s]
+ 32%|███▏      | 10/31 [00:00<00:01, 13.72it/s]
+ 39%|███▊      | 12/31 [00:00<00:01, 12.83it/s]
+ 45%|████▌     | 14/31 [00:01<00:01, 12.12it/s]
+ 52%|█████▏    | 16/31 [00:01<00:01, 12.05it/s]
+ 58%|█████▊    | 18/31 [00:01<00:01, 11.63it/s]
+ 65%|██████▍   | 20/31 [00:01<00:00, 11.72it/s]
+ 71%|███████   | 22/31 [00:01<00:00, 11.78it/s]
+ 77%|███████▋  | 24/31 [00:01<00:00, 11.77it/s]
+ 84%|████████▍ | 26/31 [00:02<00:00, 11.12it/s]
+ 90%|█████████ | 28/31 [00:02<00:00, 10.68it/s]
+ 97%|█████████▋| 30/31 [00:02<00:00, 10.12it/s]
+100%|██████████| 31/31 [00:02<00:00, 11.64it/s]
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  3%|▎         | 1/30 [00:00<00:04,  6.47it/s]
+  7%|▋         | 2/30 [00:00<00:04,  6.24it/s]
+ 10%|█         | 3/30 [00:00<00:04,  5.62it/s]
+ 13%|█▎        | 4/30 [00:00<00:04,  5.85it/s]
+ 17%|█▋        | 5/30 [00:00<00:03,  6.63it/s]
+ 20%|██        | 6/30 [00:00<00:03,  6.75it/s]
+ 23%|██▎       | 7/30 [00:01<00:03,  6.21it/s]
+ 30%|███       | 9/30 [00:01<00:03,  6.55it/s]
+ 33%|███▎      | 10/30 [00:01<00:03,  5.96it/s]
+ 37%|███▋      | 11/30 [00:01<00:03,  5.68it/s]
+ 40%|████      | 12/30 [00:02<00:03,  5.33it/s]
+ 43%|████▎     | 13/30 [00:02<00:03,  5.21it/s]
+ 47%|████▋     | 14/30 [00:02<00:02,  5.74it/s]
+ 50%|█████     | 15/30 [00:02<00:02,  6.13it/s]
+ 53%|█████▎    | 16/30 [00:02<00:02,  6.42it/s]
+ 57%|█████▋    | 17/30 [00:02<00:02,  5.85it/s]
+ 60%|██████    | 18/30 [00:03<00:02,  5.81it/s]
+ 63%|██████▎   | 19/30 [00:03<00:02,  5.12it/s]
+ 67%|██████▋   | 20/30 [00:03<00:01,  5.55it/s]
+ 70%|███████   | 21/30 [00:03<00:01,  6.16it/s]
+ 73%|███████▎  | 22/30 [00:03<00:01,  5.63it/s]
+ 77%|███████▋  | 23/30 [00:03<00:01,  5.55it/s]
+ 80%|████████  | 24/30 [00:04<00:01,  5.68it/s]
+ 83%|████████▎ | 25/30 [00:04<00:00,  5.72it/s]
+ 87%|████████▋ | 26/30 [00:04<00:00,  5.58it/s]
+ 90%|█████████ | 27/30 [00:04<00:00,  5.17it/s]
+ 93%|█████████▎| 28/30 [00:04<00:00,  4.85it/s]
+ 97%|█████████▋| 29/30 [00:05<00:00,  5.32it/s]
+100%|██████████| 30/30 [00:05<00:00,  5.51it/s]
+100%|██████████| 30/30 [00:05<00:00,  5.72it/s]
+overall time: 8.27 seconds

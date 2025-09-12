@@ -1,0 +1,13 @@
+name;runtime
+data/generated_unified_pmc/uclinux-base_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -m none);5.988790212199092
+data/generated_unified_pmc/uclinux-base_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m rejection);11.986056219786406
+data/generated_unified_pmc/uclinux-base_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m tseitin);82.18438861332834
+data/generated_unified_pmc/adderii_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -m none);101.7438586447388
+data/generated_unified_pmc/adderii_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m rejection);123.63188794441521
+data/generated_unified_pmc/ea2468_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -m none);101.66472318395972
+data/generated_unified_pmc/ea2468_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m tseitin);457.1843654308468
+data/generated_unified_pmc/ea2468_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m rejection);117.01654393970966
+data/generated_unified_pmc/adderii_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m tseitin);error (1)
+data/generated_unified_pmc/automotive01_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -m none);4039.008794296533
+data/generated_unified_pmc/automotive01_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m rejection);3979.314755216241
+data/generated_unified_pmc/automotive01_seed56926_pc0.4_pa0.9_pv0.3_pr0.1 (--seed 16873 -a uniform -m tseitin);timeout

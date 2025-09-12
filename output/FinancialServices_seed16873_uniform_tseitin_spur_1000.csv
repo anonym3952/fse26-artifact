@@ -1,0 +1,10 @@
+,directory,seed,file_old,file_new,sampler,method,algorithm,sampling_time,num_samples,num_valid_old_expected,num_valid_old,num_needed_old,num_retained,num_retained_expected,num_more_old,num_needed_new,num_candidates_new
+0,data/histories_unified/FinancialServices,16873,2017-05-22.dimacs,2017-09-28.dimacs,spur,tseitin,uniform,85.83905132114887,1000,0.0,0,0,0,0.0,0,1000,0
+1,data/histories_unified/FinancialServices,16873,2017-09-28.dimacs,2017-10-20.dimacs,spur,tseitin,uniform,147.88898763246834,1000,0.0,0,0,0,0.0,0,1000,0
+2,data/histories_unified/FinancialServices,16873,2017-10-20.dimacs,2017-11-20.dimacs,spur,tseitin,uniform,142.47278711386025,1000,0.7825228536802652,2,0,0,0.7825228536802652,0,1000,0
+3,data/histories_unified/FinancialServices,16873,2017-11-20.dimacs,2017-12-22.dimacs,spur,tseitin,uniform,47.294543739408255,1000,853.7398856922682,857,847,847,853.7398856922682,0,153,0
+4,data/histories_unified/FinancialServices,16873,2017-12-22.dimacs,2018-01-23.dimacs,spur,tseitin,uniform,130.0645001810044,1000,0.0,0,0,0,0.0,0,1000,0
+5,data/histories_unified/FinancialServices,16873,2018-01-23.dimacs,2018-02-20.dimacs,spur,tseitin,uniform,184.53373232111335,1000,0.0,0,0,0,0.0,0,1000,0
+6,data/histories_unified/FinancialServices,16873,2018-02-20.dimacs,2018-03-26.dimacs,spur,tseitin,uniform,189.61854906380177,1000,0.0,0,0,0,0.0,0,1000,0
+7,data/histories_unified/FinancialServices,16873,2018-03-26.dimacs,2018-04-23.dimacs,spur,tseitin,uniform,238.35953908227384,1000,0.0,0,0,0,0.0,0,1000,0
+8,data/histories_unified/FinancialServices,16873,2018-04-23.dimacs,2018-05-09.dimacs,spur,tseitin,uniform,209.5836370922625,1000,0.0,0,0,0,0.0,0,1000,0

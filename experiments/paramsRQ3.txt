@@ -1,0 +1,3 @@
+--seed 16873 -m none 
+--seed 16873 -a uniform -m tseitin 
+--seed 16873 -a uniform -m rejection

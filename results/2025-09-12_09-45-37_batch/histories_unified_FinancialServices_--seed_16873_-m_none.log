@@ -1,0 +1,22 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -m none data/histories_unified/FinancialServices
+data/histories_unified/FinancialServices
+1000 samples
+method: none
+seed: 16873
+Elapsed time: 11.822 seconds
+Total samples: 9000
+Unique samples: 9380 (--4.22%)
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|█         | 1/10 [00:00<00:01,  5.20it/s]
+ 20%|██        | 2/10 [00:01<00:04,  1.69it/s]
+ 30%|███       | 3/10 [00:02<00:05,  1.29it/s]
+ 40%|████      | 4/10 [00:03<00:05,  1.15it/s]
+ 50%|█████     | 5/10 [00:04<00:04,  1.01it/s]
+ 60%|██████    | 6/10 [00:05<00:04,  1.05s/it]
+ 70%|███████   | 7/10 [00:06<00:03,  1.17s/it]
+ 80%|████████  | 8/10 [00:07<00:02,  1.10s/it]
+ 90%|█████████ | 9/10 [00:09<00:01,  1.37s/it]
+100%|██████████| 10/10 [00:11<00:00,  1.58s/it]
+100%|██████████| 10/10 [00:11<00:00,  1.18s/it]
+overall time: 12.23 seconds

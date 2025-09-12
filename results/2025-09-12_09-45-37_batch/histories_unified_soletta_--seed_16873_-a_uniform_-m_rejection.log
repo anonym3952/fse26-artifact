@@ -1,0 +1,233 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a uniform -m rejection data/histories_unified/soletta
+data/histories_unified/soletta
+1000 samples
+method: rejection
+seed: 16873
+Computing model count of each file:
+Processing pairs
+Generated & checked 8406.361046306734 candidates per second
+Generated & checked 11374.03431462381 candidates per second
+Generated & checked 11664.727444601656 candidates per second
+Generated & checked 10731.406257092845 candidates per second
+Generated & checked 11635.826955280287 candidates per second
+Generated & checked 11297.51871456774 candidates per second
+Generated & checked 11184.756373995102 candidates per second
+Generated & checked 10930.11528748885 candidates per second
+Generated & checked 11345.912459545636 candidates per second
+Generated & checked 11195.959509846909 candidates per second
+Generated & checked 11443.286862275554 candidates per second
+Generated & checked 11341.781963532854 candidates per second
+Generated & checked 9403.486050865915 candidates per second
+Generated & checked 11299.248670273424 candidates per second
+Generated & checked 9451.579771298108 candidates per second
+Generated & checked 9346.964379694507 candidates per second
+Generated & checked 9482.10902710343 candidates per second
+Generated & checked 2240.083316087081 candidates per second
+Generated & checked 9126.973074515377 candidates per second
+Generated & checked 759.4666524004698 candidates per second
+Generated & checked 8740.65787664941 candidates per second
+Generated & checked 8931.32647249187 candidates per second
+Generated & checked 6378.466631677652 candidates per second
+Generated & checked 6501.244034249571 candidates per second
+Generated & checked 6638.39463273098 candidates per second
+Generated & checked 6130.385975465595 candidates per second
+Generated & checked 6899.3145491414225 candidates per second
+Generated & checked 7263.085440090592 candidates per second
+Generated & checked 6496.841290569993 candidates per second
+Generated & checked 5731.443851275405 candidates per second
+Generated & checked 5754.906943420274 candidates per second
+Generated & checked 5192.694870965882 candidates per second
+Generated & checked 6291.877601173396 candidates per second
+Generated & checked 992.5065259988049 candidates per second
+Generated & checked 5031.602738278139 candidates per second
+Generated & checked 1744.7996028570244 candidates per second
+Generated & checked 4859.852641635297 candidates per second
+Generated & checked 5475.893608452733 candidates per second
+Generated & checked 5354.688250551708 candidates per second
+Generated & checked 5452.287609620041 candidates per second
+Generated & checked 3337.367060507263 candidates per second
+Generated & checked 3745.775960602733 candidates per second
+Generated & checked 4514.726255693371 candidates per second
+Generated & checked 4590.578008720504 candidates per second
+Generated & checked 4550.80860244319 candidates per second
+Generated & checked 4686.240328969267 candidates per second
+Generated & checked 4770.476061015713 candidates per second
+Generated & checked 4862.553795670845 candidates per second
+Generated & checked 4367.721792472134 candidates per second
+Generated & checked 4469.638581096344 candidates per second
+Generated & checked 4136.2968385695585 candidates per second
+Generated & checked 4285.959067232491 candidates per second
+Generated & checked 3771.7460427945625 candidates per second
+Generated & checked 4643.140458773163 candidates per second
+Generated & checked 4475.024874438614 candidates per second
+Generated & checked 4521.644246110741 candidates per second
+Generated & checked 3946.793332211762 candidates per second
+Generated & checked 4463.113391519182 candidates per second
+Generated & checked 3904.3461001705327 candidates per second
+Generated & checked 4108.044291928221 candidates per second
+Generated & checked 4612.97051579138 candidates per second
+Generated & checked 3245.908771019237 candidates per second
+Generated & checked 2789.755686574768 candidates per second
+Generated & checked 3330.3370979741303 candidates per second
+Generated & checked 2958.2754890702554 candidates per second
+Generated & checked 3490.398656914926 candidates per second
+Generated & checked 3452.900829559832 candidates per second
+Generated & checked 2893.877763725136 candidates per second
+Generated & checked 147.85573796858233 candidates per second
+Generated & checked 2950.939463977658 candidates per second
+Generated & checked 2727.96799612528 candidates per second
+Generated & checked 3781.874484908295 candidates per second
+Generated & checked 3038.7961785787525 candidates per second
+Generated & checked 2934.4317906852816 candidates per second
+Generated & checked 3250.3466214063233 candidates per second
+Generated & checked 2897.6795712652684 candidates per second
+Generated & checked 2714.326434460262 candidates per second
+Generated & checked 3024.3762791078348 candidates per second
+Generated & checked 3642.5251547833095 candidates per second
+Generated & checked 1557.2713269244693 candidates per second
+Generated & checked 1580.6246599648896 candidates per second
+Generated & checked 1547.335894206768 candidates per second
+Generated & checked 1700.3731039545896 candidates per second
+Generated & checked 1598.4824444672565 candidates per second
+Generated & checked 1816.062152970633 candidates per second
+Generated & checked 1681.8663450077627 candidates per second
+Generated & checked 1720.0198883389346 candidates per second
+Generated & checked 1744.4775001903015 candidates per second
+Generated & checked 1650.3147483329624 candidates per second
+Generated & checked 1773.0159299248733 candidates per second
+Generated & checked 1795.6006653269199 candidates per second
+Generated & checked 1298.3706142784633 candidates per second
+Generated & checked 1566.9952752167849 candidates per second
+Generated & checked 1463.7295237806934 candidates per second
+Generated & checked 1763.5640501443563 candidates per second
+Generated & checked 1583.7246239333344 candidates per second
+Generated & checked 1507.5869312425896 candidates per second
+Generated & checked 1717.3567629584452 candidates per second
+Generated & checked 1630.1672474605225 candidates per second
+Total samples: 131000
+Unique samples: 63553 (-51.49%)
+wrote results to output/soletta_seed16873_uniform_rejection_spur_1000.csv
+
+  0%|          | 0/132 [00:00<?, ?it/s]
+ 12%|█▏        | 16/132 [00:00<00:00, 155.24it/s]
+ 24%|██▍       | 32/132 [00:00<00:00, 116.58it/s]
+ 34%|███▍      | 45/132 [00:00<00:00, 95.01it/s] 
+ 42%|████▏     | 56/132 [00:00<00:00, 84.70it/s]
+ 49%|████▉     | 65/132 [00:00<00:00, 78.10it/s]
+ 55%|█████▌    | 73/132 [00:00<00:00, 73.57it/s]
+ 61%|██████▏   | 81/132 [00:00<00:00, 69.45it/s]
+ 67%|██████▋   | 88/132 [00:01<00:00, 66.11it/s]
+ 72%|███████▏  | 95/132 [00:01<00:00, 62.54it/s]
+ 77%|███████▋  | 102/132 [00:01<00:00, 59.28it/s]
+ 82%|████████▏ | 108/132 [00:01<00:00, 56.85it/s]
+ 86%|████████▋ | 114/132 [00:01<00:00, 51.60it/s]
+ 91%|█████████ | 120/132 [00:01<00:00, 47.00it/s]
+ 95%|█████████▍| 125/132 [00:01<00:00, 44.40it/s]
+ 98%|█████████▊| 130/132 [00:02<00:00, 41.88it/s]
+100%|██████████| 132/132 [00:02<00:00, 62.06it/s]
+
+  0%|          | 0/131 [00:00<?, ?it/s]
+  1%|          | 1/131 [00:00<00:31,  4.14it/s]
+  2%|▏         | 2/131 [00:00<00:23,  5.51it/s]
+  3%|▎         | 4/131 [00:00<00:15,  8.35it/s]
+  4%|▍         | 5/131 [00:00<00:15,  8.11it/s]
+  5%|▌         | 7/131 [00:00<00:12,  9.57it/s]
+  7%|▋         | 9/131 [00:01<00:11, 10.29it/s]
+  8%|▊         | 11/131 [00:01<00:13,  8.87it/s]
+  9%|▉         | 12/131 [00:01<00:13,  8.55it/s]
+ 10%|▉         | 13/131 [00:01<00:14,  8.19it/s]
+ 11%|█         | 14/131 [00:01<00:14,  7.99it/s]
+ 11%|█▏        | 15/131 [00:01<00:14,  7.74it/s]
+ 12%|█▏        | 16/131 [00:01<00:15,  7.47it/s]
+ 13%|█▎        | 17/131 [00:02<00:15,  7.41it/s]
+ 15%|█▍        | 19/131 [00:02<00:12,  9.30it/s]
+ 15%|█▌        | 20/131 [00:02<00:13,  8.43it/s]
+ 17%|█▋        | 22/131 [00:02<00:12,  8.88it/s]
+ 18%|█▊        | 23/131 [00:02<00:13,  7.78it/s]
+ 18%|█▊        | 24/131 [00:02<00:15,  7.09it/s]
+ 19%|█▉        | 25/131 [00:03<00:15,  6.76it/s]
+ 20%|█▉        | 26/131 [00:03<00:16,  6.51it/s]
+ 21%|██▏       | 28/131 [00:03<00:15,  6.82it/s]
+ 22%|██▏       | 29/131 [00:03<00:16,  6.15it/s]
+ 23%|██▎       | 30/131 [00:04<00:17,  5.68it/s]
+ 24%|██▎       | 31/131 [00:04<00:18,  5.31it/s]
+ 24%|██▍       | 32/131 [00:04<00:19,  5.06it/s]
+ 25%|██▌       | 33/131 [00:04<00:19,  5.04it/s]
+ 26%|██▌       | 34/131 [00:04<00:20,  4.81it/s]
+ 27%|██▋       | 35/131 [00:05<00:18,  5.14it/s]
+ 27%|██▋       | 36/131 [00:05<00:20,  4.69it/s]
+ 29%|██▉       | 38/131 [00:05<00:16,  5.59it/s]
+ 30%|██▉       | 39/131 [00:05<00:17,  5.31it/s]
+ 31%|███▏      | 41/131 [00:06<00:16,  5.54it/s]
+ 32%|███▏      | 42/131 [00:06<00:19,  4.60it/s]
+ 33%|███▎      | 43/131 [00:06<00:20,  4.32it/s]
+ 34%|███▍      | 45/131 [00:07<00:17,  4.96it/s]
+ 35%|███▌      | 46/131 [00:07<00:18,  4.63it/s]
+ 36%|███▌      | 47/131 [00:07<00:18,  4.42it/s]
+ 37%|███▋      | 48/131 [00:07<00:21,  3.82it/s]
+ 37%|███▋      | 49/131 [00:08<00:23,  3.50it/s]
+ 38%|███▊      | 50/131 [00:08<00:23,  3.42it/s]
+ 39%|███▉      | 51/131 [00:08<00:23,  3.45it/s]
+ 40%|███▉      | 52/131 [00:09<00:23,  3.40it/s]
+ 40%|████      | 53/131 [00:09<00:22,  3.46it/s]
+ 41%|████      | 54/131 [00:09<00:21,  3.54it/s]
+ 42%|████▏     | 55/131 [00:10<00:21,  3.47it/s]
+ 43%|████▎     | 56/131 [00:10<00:21,  3.42it/s]
+ 44%|████▎     | 57/131 [00:10<00:19,  3.73it/s]
+ 45%|████▌     | 59/131 [00:10<00:14,  4.88it/s]
+ 46%|████▌     | 60/131 [00:11<00:16,  4.36it/s]
+ 47%|████▋     | 62/131 [00:11<00:14,  4.71it/s]
+ 48%|████▊     | 63/131 [00:11<00:15,  4.31it/s]
+ 49%|████▉     | 64/131 [00:12<00:17,  3.90it/s]
+ 50%|█████     | 66/131 [00:12<00:11,  5.63it/s]
+ 51%|█████     | 67/131 [00:12<00:13,  4.90it/s]
+ 52%|█████▏    | 68/131 [00:12<00:14,  4.44it/s]
+ 53%|█████▎    | 70/131 [00:13<00:09,  6.29it/s]
+ 54%|█████▍    | 71/131 [00:13<00:11,  5.23it/s]
+ 55%|█████▍    | 72/131 [00:13<00:13,  4.32it/s]
+ 56%|█████▌    | 73/131 [00:13<00:14,  3.98it/s]
+ 57%|█████▋    | 75/131 [00:14<00:13,  4.28it/s]
+ 58%|█████▊    | 76/131 [00:14<00:14,  3.91it/s]
+ 59%|█████▉    | 77/131 [00:15<00:14,  3.76it/s]
+ 60%|██████    | 79/131 [00:15<00:09,  5.42it/s]
+ 62%|██████▏   | 81/131 [00:15<00:10,  4.96it/s]
+ 63%|██████▎   | 82/131 [00:16<00:12,  4.00it/s]
+ 63%|██████▎   | 83/131 [00:16<00:13,  3.61it/s]
+ 65%|██████▍   | 85/131 [00:16<00:12,  3.76it/s]
+ 66%|██████▋   | 87/131 [00:17<00:11,  3.99it/s]
+ 67%|██████▋   | 88/131 [00:17<00:11,  3.62it/s]
+ 69%|██████▊   | 90/131 [00:18<00:11,  3.73it/s]
+ 70%|███████   | 92/131 [00:18<00:07,  4.91it/s]
+ 72%|███████▏  | 94/131 [00:18<00:08,  4.52it/s]
+ 73%|███████▎  | 96/131 [00:19<00:08,  4.17it/s]
+ 74%|███████▍  | 97/131 [00:19<00:08,  3.85it/s]
+ 75%|███████▍  | 98/131 [00:20<00:09,  3.45it/s]
+ 76%|███████▌  | 99/131 [00:20<00:10,  3.06it/s]
+ 76%|███████▋  | 100/131 [00:21<00:10,  2.82it/s]
+ 78%|███████▊  | 102/131 [00:21<00:09,  3.22it/s]
+ 79%|███████▊  | 103/131 [00:22<00:09,  2.91it/s]
+ 79%|███████▉  | 104/131 [00:22<00:09,  2.77it/s]
+ 80%|████████  | 105/131 [00:22<00:09,  2.76it/s]
+ 82%|████████▏ | 107/131 [00:23<00:05,  4.12it/s]
+ 83%|████████▎ | 109/131 [00:24<00:07,  2.78it/s]
+ 84%|████████▍ | 110/131 [00:24<00:09,  2.29it/s]
+ 85%|████████▍ | 111/131 [00:25<00:10,  1.97it/s]
+ 86%|████████▋ | 113/131 [00:26<00:08,  2.15it/s]
+ 87%|████████▋ | 114/131 [00:27<00:08,  1.91it/s]
+ 88%|████████▊ | 115/131 [00:27<00:08,  1.79it/s]
+ 89%|████████▊ | 116/131 [00:28<00:08,  1.70it/s]
+ 89%|████████▉ | 117/131 [00:29<00:08,  1.63it/s]
+ 90%|█████████ | 118/131 [00:29<00:08,  1.57it/s]
+ 91%|█████████ | 119/131 [00:30<00:07,  1.52it/s]
+ 92%|█████████▏| 120/131 [00:31<00:07,  1.51it/s]
+ 93%|█████████▎| 122/131 [00:31<00:03,  2.48it/s]
+ 94%|█████████▍| 123/131 [00:32<00:04,  1.67it/s]
+ 95%|█████████▌| 125/131 [00:33<00:03,  1.94it/s]
+ 96%|█████████▌| 126/131 [00:34<00:02,  1.84it/s]
+ 97%|█████████▋| 127/131 [00:34<00:02,  1.73it/s]
+ 98%|█████████▊| 128/131 [00:35<00:01,  1.61it/s]
+ 98%|█████████▊| 129/131 [00:36<00:01,  1.55it/s]
+ 99%|█████████▉| 130/131 [00:36<00:00,  1.49it/s]
+100%|██████████| 131/131 [00:37<00:00,  1.47it/s]
+100%|██████████| 131/131 [00:37<00:00,  3.48it/s]
+overall time: 40.53 seconds

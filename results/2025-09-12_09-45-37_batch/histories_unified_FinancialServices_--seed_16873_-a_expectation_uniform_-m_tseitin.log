@@ -1,0 +1,36 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a expectation_uniform -m tseitin data/histories_unified/FinancialServices
+data/histories_unified/FinancialServices
+1000 samples
+method: tseitin
+seed: 16873
+Computing model count of each file:
+Processing pairs
+Total samples: 9000
+Unique samples: 8141 (-9.54%)
+wrote results to output/FinancialServices_seed16873_expectation_uniform_tseitin_spur_1000.csv
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|█         | 1/10 [00:05<00:47,  5.23s/it]
+ 20%|██        | 2/10 [00:14<00:59,  7.38s/it]
+ 30%|███       | 3/10 [00:23<00:57,  8.19s/it]
+ 40%|████      | 4/10 [00:32<00:52,  8.70s/it]
+ 50%|█████     | 5/10 [00:42<00:44,  8.97s/it]
+ 60%|██████    | 6/10 [00:51<00:35,  8.94s/it]
+ 70%|███████   | 7/10 [01:08<00:34, 11.66s/it]
+ 80%|████████  | 8/10 [01:18<00:22, 11.19s/it]
+ 90%|█████████ | 9/10 [01:28<00:10, 10.96s/it]
+100%|██████████| 10/10 [01:40<00:00, 11.13s/it]
+100%|██████████| 10/10 [01:40<00:00, 10.05s/it]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+ 11%|█         | 1/9 [01:28<11:50, 88.86s/it]
+ 22%|██▏       | 2/9 [03:55<14:18, 122.67s/it]
+ 33%|███▎      | 3/9 [06:16<13:07, 131.20s/it]
+ 44%|████▍     | 4/9 [07:03<08:09, 97.85s/it] 
+ 56%|█████▌    | 5/9 [09:14<07:19, 109.81s/it]
+ 67%|██████▋   | 6/9 [12:31<06:58, 139.37s/it]
+ 78%|███████▊  | 7/9 [15:35<05:08, 154.23s/it]
+ 89%|████████▉ | 8/9 [19:28<02:59, 179.17s/it]
+100%|██████████| 9/9 [23:08<00:00, 191.92s/it]
+100%|██████████| 9/9 [23:08<00:00, 154.27s/it]
+overall time: 24 minutes 49.68 seconds

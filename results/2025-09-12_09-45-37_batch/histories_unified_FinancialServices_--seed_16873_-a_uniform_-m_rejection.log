@@ -1,0 +1,45 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a uniform -m rejection data/histories_unified/FinancialServices
+data/histories_unified/FinancialServices
+1000 samples
+method: rejection
+seed: 16873
+Computing model count of each file:
+Processing pairs
+Generated & checked 1266.2877109336805 candidates per second
+Generated & checked 1068.194697481536 candidates per second
+Generated & checked 1125.1650628405937 candidates per second
+Generated & checked 828.4883499828615 candidates per second
+Generated & checked 905.8808825779274 candidates per second
+Generated & checked 593.1000695391996 candidates per second
+Generated & checked 1021.4504418666062 candidates per second
+Generated & checked 470.7163240252725 candidates per second
+Generated & checked 443.73442318627053 candidates per second
+Total samples: 9000
+Unique samples: 8157 (-9.37%)
+wrote results to output/FinancialServices_seed16873_uniform_rejection_spur_1000.csv
+
+  0%|          | 0/10 [00:00<?, ?it/s]
+ 10%|█         | 1/10 [00:05<00:49,  5.47s/it]
+ 20%|██        | 2/10 [00:14<01:00,  7.57s/it]
+ 30%|███       | 3/10 [00:23<00:59,  8.44s/it]
+ 40%|████      | 4/10 [00:33<00:53,  8.85s/it]
+ 50%|█████     | 5/10 [00:42<00:45,  9.07s/it]
+ 60%|██████    | 6/10 [00:51<00:35,  8.92s/it]
+ 70%|███████   | 7/10 [01:08<00:34, 11.63s/it]
+ 80%|████████  | 8/10 [01:18<00:22, 11.13s/it]
+ 90%|█████████ | 9/10 [01:28<00:10, 10.81s/it]
+100%|██████████| 10/10 [01:40<00:00, 10.96s/it]
+100%|██████████| 10/10 [01:40<00:00, 10.02s/it]
+
+  0%|          | 0/9 [00:00<?, ?it/s]
+ 11%|█         | 1/9 [00:01<00:08,  1.08s/it]
+ 22%|██▏       | 2/9 [00:02<00:07,  1.08s/it]
+ 33%|███▎      | 3/9 [00:03<00:06,  1.07s/it]
+ 44%|████▍     | 4/9 [00:10<00:17,  3.54s/it]
+ 56%|█████▌    | 5/9 [00:11<00:10,  2.71s/it]
+ 67%|██████▋   | 6/9 [00:13<00:07,  2.42s/it]
+ 78%|███████▊  | 7/9 [00:14<00:04,  2.00s/it]
+ 89%|████████▉ | 8/9 [00:17<00:02,  2.09s/it]
+100%|██████████| 9/9 [00:19<00:00,  2.20s/it]
+100%|██████████| 9/9 [00:19<00:00,  2.17s/it]
+overall time: 2 minutes 0.1 seconds

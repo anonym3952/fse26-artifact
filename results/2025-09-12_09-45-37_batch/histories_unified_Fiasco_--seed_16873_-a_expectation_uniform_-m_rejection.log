@@ -1,0 +1,95 @@
+Running command: python scripts/history_sampling.py -n 1000 --csv --seed 16873 -a expectation_uniform -m rejection data/histories_unified/Fiasco
+data/histories_unified/Fiasco
+1000 samples
+method: rejection
+seed: 16873
+Computing model count of each file:
+Processing pairs
+Generated & checked 14312.924346783362 candidates per second
+Generated & checked 9580.73427485045 candidates per second
+Generated & checked 116.19829653172543 candidates per second
+Generated & checked 13744.02168606807 candidates per second
+Generated & checked 2404.606775700125 candidates per second
+Generated & checked 11975.965141211374 candidates per second
+Generated & checked 11394.760080301103 candidates per second
+Generated & checked 10745.753332127852 candidates per second
+Generated & checked 17595.24218628636 candidates per second
+Generated & checked 9406.838382120219 candidates per second
+Generated & checked 8155.475623509972 candidates per second
+Generated & checked 6264.973082413226 candidates per second
+Generated & checked 14430.12964513082 candidates per second
+Generated & checked 13847.460874760858 candidates per second
+Generated & checked 4383.629357861315 candidates per second
+Generated & checked 7944.245138819535 candidates per second
+Generated & checked 12132.256215044854 candidates per second
+Generated & checked 8746.417972504954 candidates per second
+Generated & checked 11092.990517593013 candidates per second
+Generated & checked 11289.320733285233 candidates per second
+Generated & checked 835.0255990319462 candidates per second
+Generated & checked 6407.743252956732 candidates per second
+Generated & checked 4513.300561331802 candidates per second
+Generated & checked 11399.091559406374 candidates per second
+Generated & checked 11625.13699656575 candidates per second
+Generated & checked 11988.106813305056 candidates per second
+Generated & checked 12139.682379393209 candidates per second
+Generated & checked 11454.220331223856 candidates per second
+Generated & checked 3515.876890906745 candidates per second
+Generated & checked 964.6831492273926 candidates per second
+Generated & checked 4510.536749504021 candidates per second
+Generated & checked 10694.644119623224 candidates per second
+Generated & checked 1949.9862469034715 candidates per second
+Total samples: 30000
+Unique samples: 9067 (-69.78%)
+wrote results to output/Fiasco_seed16873_expectation_uniform_rejection_spur_1000.csv
+
+  0%|          | 0/31 [00:00<?, ?it/s]
+  6%|▋         | 2/31 [00:00<00:01, 15.43it/s]
+ 13%|█▎        | 4/31 [00:00<00:01, 15.49it/s]
+ 19%|█▉        | 6/31 [00:00<00:01, 15.09it/s]
+ 26%|██▌       | 8/31 [00:00<00:01, 14.70it/s]
+ 32%|███▏      | 10/31 [00:00<00:01, 13.70it/s]
+ 39%|███▊      | 12/31 [00:00<00:01, 12.88it/s]
+ 45%|████▌     | 14/31 [00:01<00:01, 12.16it/s]
+ 52%|█████▏    | 16/31 [00:01<00:01, 11.69it/s]
+ 58%|█████▊    | 18/31 [00:01<00:01, 11.81it/s]
+ 65%|██████▍   | 20/31 [00:01<00:00, 11.87it/s]
+ 71%|███████   | 22/31 [00:01<00:00, 11.87it/s]
+ 77%|███████▋  | 24/31 [00:01<00:00, 11.82it/s]
+ 84%|████████▍ | 26/31 [00:02<00:00, 11.09it/s]
+ 90%|█████████ | 28/31 [00:02<00:00, 10.68it/s]
+ 97%|█████████▋| 30/31 [00:02<00:00, 10.10it/s]
+100%|██████████| 31/31 [00:02<00:00, 11.65it/s]
+
+  0%|          | 0/30 [00:00<?, ?it/s]
+  3%|▎         | 1/30 [00:00<00:04,  6.65it/s]
+  7%|▋         | 2/30 [00:00<00:05,  5.08it/s]
+ 10%|█         | 3/30 [00:00<00:05,  5.02it/s]
+ 13%|█▎        | 4/30 [00:00<00:04,  5.46it/s]
+ 17%|█▋        | 5/30 [00:00<00:03,  6.31it/s]
+ 20%|██        | 6/30 [00:00<00:03,  6.60it/s]
+ 23%|██▎       | 7/30 [00:01<00:03,  6.17it/s]
+ 27%|██▋       | 8/30 [00:01<00:07,  2.95it/s]
+ 30%|███       | 9/30 [00:02<00:05,  3.51it/s]
+ 33%|███▎      | 10/30 [00:02<00:05,  3.79it/s]
+ 37%|███▋      | 11/30 [00:02<00:04,  4.13it/s]
+ 40%|████      | 12/30 [00:02<00:04,  4.11it/s]
+ 43%|████▎     | 13/30 [00:02<00:03,  4.39it/s]
+ 47%|████▋     | 14/30 [00:03<00:03,  5.07it/s]
+ 50%|█████     | 15/30 [00:03<00:02,  5.71it/s]
+ 53%|█████▎    | 16/30 [00:03<00:02,  5.99it/s]
+ 57%|█████▋    | 17/30 [00:03<00:02,  5.05it/s]
+ 60%|██████    | 18/30 [00:03<00:02,  5.50it/s]
+ 63%|██████▎   | 19/30 [00:03<00:02,  5.40it/s]
+ 67%|██████▋   | 20/30 [00:04<00:01,  5.82it/s]
+ 70%|███████   | 21/30 [00:04<00:01,  6.49it/s]
+ 73%|███████▎  | 22/30 [00:04<00:01,  5.93it/s]
+ 77%|███████▋  | 23/30 [00:04<00:01,  5.95it/s]
+ 80%|████████  | 24/30 [00:04<00:00,  6.10it/s]
+ 83%|████████▎ | 25/30 [00:04<00:00,  6.00it/s]
+ 87%|████████▋ | 26/30 [00:05<00:00,  4.93it/s]
+ 90%|█████████ | 27/30 [00:05<00:00,  4.76it/s]
+ 93%|█████████▎| 28/30 [00:05<00:00,  4.52it/s]
+ 97%|█████████▋| 29/30 [00:05<00:00,  5.05it/s]
+100%|██████████| 30/30 [00:05<00:00,  5.30it/s]
+100%|██████████| 30/30 [00:05<00:00,  5.05it/s]
+overall time: 8.96 seconds
