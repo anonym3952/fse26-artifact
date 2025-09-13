@@ -9,9 +9,9 @@ from tqdm import tqdm
 
 from utils import Timer
 from retainment import compute_model_count
-from incremental_sampling import (
+from retainment_sampling import (
     get_samples,
-    incremental_sampling,
+    retainment_sampling,
     Sampler,
     Method,
     Algorithm,
@@ -157,11 +157,11 @@ def benchmark(
     else:
         print("Processing pairs")
         records = []
-        samples_old = None
+        samples_old = get_samples(dimacs_files[0], num_samples, sampler)
         for i in tqdm(range(len(dimacs_files) - 1)):
             file_old, file_new = dimacs_files[i], dimacs_files[i + 1]
-            timer = Timer(enable_printing=False)
-            samples, results = incremental_sampling(
+            sample_timer = Timer(enable_printing=False)
+            samples, results = retainment_sampling(
                 sampler,
                 method,
                 algorithm,
@@ -172,7 +172,7 @@ def benchmark(
                 count_old=model_count.get(file_old.name),
                 count_new=model_count.get(file_new.name),
             )
-            sampling_time = timer.stop()
+            sampling_time = sample_timer.stop()
             records.append(
                 {
                     "directory": directory,
@@ -197,7 +197,7 @@ def benchmark(
             all_samples = all_samples.union(samples_to_set(samples))
 
     duration = timer.stop()
-    total_samples = (len(dimacs_files) - 1) * num_samples
+    total_samples = len(dimacs_files) * num_samples
     print(f"Total samples: {total_samples}")
     unique_samples = len(all_samples)
     print(f"Unique samples: {unique_samples} (-{1-(unique_samples/total_samples):.2%})")

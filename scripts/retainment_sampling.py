@@ -24,7 +24,6 @@ class Method(StrEnum):
     none = auto()
     rejection = auto()
     tseitin = auto()
-    # bdd = auto()
 
 
 class Algorithm(StrEnum):
@@ -38,12 +37,11 @@ class UnsatError(Exception):
 
 
 SEED = 4711
-VALIDATE_SAMPLES = True
+VALIDATE_SAMPLES = False
 DEFAULT_SAMPLER = Sampler.spur
 DEFAULT_METHOD = Method.rejection
 DEFAULT_ALGORITHM = Algorithm.uniform
 SPUR = os.getenv("SPUR", "spur")
-INCREMENTAL_CLI = os.getenv("INCREMENTAL_CLI", "incremental-cli")
 
 REJECTION_MAX_CANDIDATES = 10**4
 """In rejection sampling: the maximum number of candidate samples requested at once from the base sampler"""
@@ -152,6 +150,7 @@ def get_samples_kus(file: Path, n: int) -> list[list[int]]:
 
 
 def get_samples(file: Path, n: int, engine: Sampler) -> list[list[int]]:
+    """Generate `n` samples for the given `file`, using the sampler specified by `engine`."""
     match engine:
         case Sampler.kus:
             return get_samples_kus(file, n)
@@ -162,11 +161,18 @@ def get_samples(file: Path, n: int, engine: Sampler) -> list[list[int]]:
 
 
 def rejection_sampling(
-    engine, file_old: Path, file_new: Path, n: int, hitrate=1.0, oversample=0.05
+    engine: Sampler, file_old: Path, file_new: Path, n: int, hitrate=1.0, oversample=0.05
 ) -> tuple[list[list[int]], int]:
     """
-    Sample `n` uniform configurations from the new model that do not satisfy the old model.
-    `engine` is either "SPUR" or "KUS"
+    Sample `n` uniform configurations from the new model (`file_new`) that do not satisfy the old model (`file_old`).
+    Candidate samples are provided by the sampler specified by `engine`.
+    
+    Returns the list of samples and the number of candidate configurations that where checked.
+
+    If the expected hit rate is knonw, it can be provided to make a good guess how many candidate samples need to be requested to end up with `n` valid samples: in expectation, `n / hitrate` many candidates are reequired.
+    To account for variance, `oversample` allows to specify a percentage of how many more candidates should be requested (default: 5%).
+    
+    Uses the global constants `REJECTION_MAX_CANDIDATES` and `REJECTION_TOTAL_MAX_CANDIDATES`.
     """
     assert n > 0
 
@@ -176,7 +182,7 @@ def rejection_sampling(
     is_sat = checker_old.append_formula(f_old.clauses, no_return=False)
     assert is_sat, f"{file_old} is UNSAT"
 
-    # generate n candidate samples for file_new and reject those that are valid for file_old
+    # generate candidate samples for file_new and reject those that are valid for file_old
     samples = []
     num_samples = 0
     num_candidates = 0
@@ -184,11 +190,9 @@ def rejection_sampling(
         round(n / hitrate * (1 + oversample)), REJECTION_MAX_CANDIDATES
     )
     while num_samples < n and num_candidates < REJECTION_TOTAL_MAX_CANDIDATES:
-        # print(f"sample {next_candidates} candidates ({n - num_samples} samples needed)")
         timer = Timer(enable_printing=False)
         candidates = get_samples(file_new, next_candidates, engine)
         checks = 0
-        # print(f"check candidate samples")
         num_candidates += next_candidates
         for candidate in candidates:
             # reject samples valid for file_old
@@ -201,7 +205,6 @@ def rejection_sampling(
         else:  # no break
             # with m valid samples remaining, the hitrate is ~ m/n. We still need n-m samples, so we generate another (n-m)n/m candidate samples
             hitrate = num_samples / num_candidates
-            # print(f"hit rate: {hitrate}")
             if hitrate == 0.0:
                 hitrate = 0.0001
             next_candidates = min(
@@ -209,7 +212,7 @@ def rejection_sampling(
                 REJECTION_MAX_CANDIDATES,
             )
         check_time = timer.stop()
-        print(f"Generated & checked {checks/check_time} candidates per second")
+        # print(f"Generated & checked {checks/check_time} candidates per second")
     if num_samples < n:
         print(
             f"Warning: Rejection sampling aborted with {n} of {num_samples} samples found, after rejecting {num_candidates} candidate samples."
@@ -217,7 +220,7 @@ def rejection_sampling(
     return samples, num_candidates
 
 
-def tseitin_sampling(engine, file_old: Path, file_new: Path, n: int) -> list[list[int]]:
+def tseitin_sampling(engine:Sampler, file_old: Path, file_new: Path, n: int) -> list[list[int]]:
     f_old = CNF(from_file=file_old)
     cnf = f_old.negate()  # not F
     if cnf.auxvars:
@@ -236,119 +239,114 @@ def tseitin_sampling(engine, file_old: Path, file_new: Path, n: int) -> list[lis
 
 
 def write_samples(samples: list[list[int]], path: Path):
+    """Write samples to a file, one per line"""
     with path.open("w") as f:
         for clause in samples:
             f.write(" ".join(map(str, clause)) + "\n")
 
 
 def read_samples(path: Path) -> list[list[int]]:
+    """
+    Read samples from a file.
+    
+    File format:
+    ```
+    1 -2 3
+    -1 2 3
+    1 2 3
+    ```
+    yields the sample list `[[1,-2,3], [-1,2,3], [1,2,3]]`
+    """
     with path.open() as f:
         return [list(map(int, line.strip().split())) for line in f if line.strip()]
 
 
-# def bdd_sampling(
-#     algorithm: Algorithm,
-#     file_old: Path,
-#     file_new: Path,
-#     num_samples: int,
-#     samples_old: list[list[int]],
-# ) -> list[list[int]]:
-#     with (
-#         tempfile.NamedTemporaryFile("r") as output_file,
-#         tempfile.NamedTemporaryFile("w+") as samples_file,
-#     ):
-#         write_samples(samples=samples_old, path=Path(samples_file.name))
-#         cmd = [
-#             str(INCREMENTAL_CLI),
-#             "--num-samples",
-#             str(num_samples),
-#             "--output-file",
-#             output_file.name,
-#             "--samples-old",
-#             samples_file.name,
-#             "--algorithm",
-#             str(algorithm).replace("_", "-"),
-#             "--seed",
-#             str(random.randint(0, 10000)),
-#             "--pmc",
-#             str(file_old),
-#             str(file_new),
-#         ]
-#         try:
-#             result = subprocess.run(cmd, check=True, capture_output=True, text=True)
-#             if result.stderr:
-#                 print(result.stderr)
-#             # print("STDOUT:", result.stdout)
-#         except subprocess.CalledProcessError as e:
-#             # print("STDOUT:", e.stdout)
-#             if e.stderr:
-#                 print("STDERR:", e.stderr)
-#             raise
-#         return read_samples(Path(output_file.name))
-
-
-def incremental_sampling(
+def retainment_sampling(
     engine: Sampler,
     method: Method,
     algorithm: Algorithm,
     file_old: Path,
     file_new: Path,
     num_samples: int,
-    samples_old=None,
-    count_old=None,
-    count_new=None,
+    samples_old: list[list[int]]|None=None,
+    count_old:int|None=None,
+    count_new:int|None=None,
 ) -> tuple[list[list[int]], dict]:
-    """Incremental sampling"""
+    """Retainment sampling"""
 
-    # Create solvers for old and new CNF
-    f_old = CNF(from_file=file_old)
-    checker_old = Solver()
-    is_sat = checker_old.append_formula(f_old.clauses, no_return=False)
-    assert is_sat, f"{file_old} is UNSAT"
+    # compute model count of conjunction
+    tmp_dir = Path(tempfile.mkdtemp())
+    file_conj = conjunction(file_old, file_new, directory=tmp_dir)
+    count_conj = compute_model_count(file_conj)
+    assert count_conj is not None
 
-    f_new = CNF(from_file=file_new)
-    checker_new = Solver()
-    is_sat = checker_new.append_formula(f_new.clauses, no_return=False)
-    assert is_sat, f"{file_new} is UNSAT"
+    # check for empty intersection
+    if count_conj == 0:
+        # no retainment possible, fall back to regular sampling
+        return get_samples(file_new, num_samples, engine), {
+        "num_samples": num_samples,
+        "num_valid_old_expected": 0,
+        "num_valid_old": 0,
+        "num_needed_old": 0,
+        "num_retained": 0,
+        "num_retained_expected": 0,
+        "num_more_old": 0,
+        "num_needed_new": num_samples,
+        "num_candidates_new": 0,
+        "update_type": "incompareable",
+        "short_circuit": True,
+    }
 
     # generate samples for old model
     if samples_old is None:
         samples_old = get_samples(file_old, num_samples, engine)
-    # if VALIDATE_SAMPLES:
-    #     for sample in samples_old:
-    #         assert checker_old.solve(
-    #             assumptions=sample
-    #         ), f"{engine} produced invalid sample for {file_old}"
+    assert len(samples_old) == num_samples
 
-    # # switch to rust for BDD sampling
-    # if method == Method.bdd:
-    #     try:
-    #         samples = bdd_sampling(
-    #             algorithm, file_old, file_new, num_samples, samples_old
-    #         )
-    #         if VALIDATE_SAMPLES:
-    #             for sample in samples:
-    #                 assert checker_new.solve(
-    #                     assumptions=sample
-    #                 ), f"BDD method produced invalid sample for {file_old}"
-    #         return samples, {"num_samples": num_samples}
-    #     except subprocess.CalledProcessError:
-    #         print(
-    #             f"Warning: BDD-based retainment sampling for {file_new} failed, falling back to regular sampling with SPUR."
-    #         )
-    #         return get_samples_spur(file_new, num_samples), {"spur_fallback": True}
-
-    # compute model counts of old, new and conjunction
+    # get model counts for old and new file
     if count_old is None:
         count_old = compute_model_count(file_old)
     assert count_old
     if count_new is None:
         count_new = compute_model_count(file_new)
     assert count_new
-    tmp_dir = Path(tempfile.mkdtemp())
-    file_conj = conjunction(file_old, file_new, directory=tmp_dir)
-    count_conj = compute_model_count(file_conj)
-    assert count_conj is not None
+
+    # check for refactoring update (no change in configuration space)
+    if count_conj == count_old and count_conj == count_new:
+        return samples_old, {
+        "num_samples": num_samples,
+        "num_valid_old_expected": num_samples,
+        "num_valid_old": num_samples,
+        "num_needed_old": num_samples,
+        "num_retained": num_samples,
+        "num_retained_expected": num_samples,
+        "num_more_old": 0,
+        "num_needed_new": 0,
+        "num_candidates_new": 0,
+        "update_type": "refactoring",
+        "short_circuit": True,
+    }
+
+    # determine update types
+    if count_conj == count_old:
+        update_type = "generalization"
+    elif count_conj == count_new:
+        update_type = "spezialization"
+    else:
+        update_type = "changing"
+
+    # Create solvers for old and new CNF
+    if VALIDATE_SAMPLES:
+        f_old = CNF(from_file=file_old)
+        checker_old = Solver()
+        is_sat = checker_old.append_formula(f_old.clauses, no_return=False)
+        assert is_sat, f"{file_old} is UNSAT"
+
+    f_new = CNF(from_file=file_new)
+    checker_new = Solver()
+    is_sat = checker_new.append_formula(f_new.clauses, no_return=False)
+    assert is_sat, f"{file_new} is UNSAT"
+
+    # compute expected retainment
     max_keep = count_conj / count_old
     max_use = count_conj / count_new
     expected_retainment = min(max_keep, max_use)
@@ -383,7 +381,6 @@ def incremental_sampling(
     if num_valid_old < num_needed_old:
         # generate more samples for the conjunction
         num_more_old = num_needed_old - num_valid_old
-        # print(f"Generate {num_more_old} new samples for the conjunction")
         samples_conj = get_samples(file_conj, num_more_old, engine)
         if VALIDATE_SAMPLES:
             for sample in samples_conj:
@@ -436,6 +433,8 @@ def incremental_sampling(
         "num_more_old": num_more_old,
         "num_needed_new": num_needed_new,
         "num_candidates_new": num_candidates_new,
+        "update_type": update_type,
+        "short_circuit": False
     }
 
 
@@ -461,7 +460,7 @@ def main():
             )
             exit(1)
 
-    incremental_sampling(
+    retainment_sampling(
         sampler, DEFAULT_METHOD, DEFAULT_ALGORITHM, file_old, file_new, num_samples
     )
 

@@ -40,12 +40,12 @@ export SPUR=spur/build/Release/spur
 ### Rust Setup
 Compile the Rust library `unified-cli`:
 ```sh
-cd zampler
+cd unified-cli
 cargo build --release
 ```
-Add `zampler/target/release/` to PATH: (Add to `.bashrc` to keep permanently in PATH)
+Add `unified-cli/target/release/` to PATH: (Add to `.bashrc` to keep permanently in PATH)
 ```sh
-export PATH="zampler/target/release/:$PATH"
+export PATH="unified-cli/target/release/:$PATH"
 ```
 Test with `unified-cli --help`.
 

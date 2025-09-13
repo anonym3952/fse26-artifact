@@ -2,6 +2,7 @@
 /tmp
 data/*/*/conjunctions
 /output/plots
+/results
 
 # python
 .venv
